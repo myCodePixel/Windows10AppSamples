@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="UploadandDownloadBlob.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UploadandDownloadBlob"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button Content="Upload" HorizontalAlignment="Left" Margin="94,139,0,0" VerticalAlignment="Top" Height="48" Width="136" Click="Button_Click"/>
+        <Button x:Name="Get_Images" Content="Get Images" HorizontalAlignment="Left" Margin="97,233,0,0" VerticalAlignment="Top" Height="44" Width="133" Click="Get_Images_Click"/>
+        <GridView Name="gv" ItemsSource="{Binding}" Height="400" Margin="508,183,36,185">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding bmpImg}" Height="100" Width="100"/>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <ProgressBar Visibility="Collapsed" x:Name="bar" HorizontalAlignment="Left" Height="12" Margin="508,142,0,0" VerticalAlignment="Top" Width="683"/>
+
+    </Grid>
+</Page>
