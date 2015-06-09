@@ -8,6 +8,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+       
+        
+        <RelativePanel>
         <Button Content="Upload" HorizontalAlignment="Left" Margin="94,139,0,0" VerticalAlignment="Top" Height="48" Width="136" Click="Button_Click"/>
         <Button x:Name="Get_Images" Content="Get Images" HorizontalAlignment="Left" Margin="97,233,0,0" VerticalAlignment="Top" Height="44" Width="133" Click="Get_Images_Click"/>
         <GridView Name="gv" ItemsSource="{Binding}" Height="400" Margin="508,183,36,185">
@@ -18,6 +21,6 @@
             </GridView.ItemTemplate>
         </GridView>
         <ProgressBar Visibility="Collapsed" x:Name="bar" HorizontalAlignment="Left" Height="12" Margin="508,142,0,0" VerticalAlignment="Top" Width="683"/>
-
+        </RelativePanel>
     </Grid>
 </Page>

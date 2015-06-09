@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="App9.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App9"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+
+
+
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="RoyalBlue">
+            <ToggleButton x:Name="BurguerToggle" 
+                      Background="Transparent" 
+                      IsChecked="False">
+                <FontIcon x:Name="Hamburger"        
+                      FontFamily="Segoe MDL2 Assets"     
+                      Foreground="LightCyan"
+                      Glyph="" />
+            </ToggleButton>
+        </Grid>
+
+        <SplitView Grid.Row="1" PanePlacement="Left"
+               CompactPaneLength="50"
+               OpenPaneLength="320"
+               IsPaneOpen="{Binding IsChecked, 
+                                    ElementName=BurguerToggle}"
+               PaneBackground="RoyalBlue"
+               DisplayMode="CompactInline">
+            <SplitView.Pane>
+                <StackPanel>
+                    <Button Content="Button 1"/>
+                </StackPanel>
+            </SplitView.Pane>
+        </SplitView>
+    </Grid>
+
+
+</Page>
