@@ -81,10 +81,8 @@
 
 
 
-        <Maps:MapControl x:Name="myMap" ZoomLevel="12"  HorizontalAlignment="Left" Margin="954,353,0,0" VerticalAlignment="Top" Height="216" Width="312">
-            <Maps:MapControl.Center >
-                
-            </Maps:MapControl.Center>
+        <Maps:MapControl MapServiceToken="mLCwcg3uu3Cm-RtElmjhng" x:Name="myMap" ZoomLevel="12"  HorizontalAlignment="Left" Margin="954,353,0,0" VerticalAlignment="Top" Height="216" Width="312">
+            
         </Maps:MapControl>
 
 
