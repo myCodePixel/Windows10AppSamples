@@ -105,6 +105,7 @@
     </AppxManifest>
     <None Include="ApplicationInsights.config" />
     <None Include="OCRReader_TemporaryKey.pfx" />
+    <None Include="OcrResources\MsOcrRes.orp" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +115,7 @@
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\WideLogo.scale-100.png" />
+    <Content Include="TestImages\SQuotes.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -146,6 +148,10 @@
       <HintPath>..\packages\System.Numerics.Vectors.4.0.0\lib\win8\System.Numerics.Vectors.WindowsRuntime.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="WindowsPreview.Media.Ocr, Version=255.255.255.255, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Windows.Ocr.1.0.0\lib\win81\x86\WindowsPreview.Media.Ocr.winmd</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
@@ -158,8 +164,10 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.16-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.16-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.0.14.3-build00177\build\portable-win81+wpa81\Microsoft.ApplicationInsights.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.0.14.3-build00177\build\portable-win81+wpa81\Microsoft.ApplicationInsights.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Windows.Ocr.1.0.0\build\win81\Microsoft.Windows.Ocr.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.Ocr.1.0.0\build\win81\Microsoft.Windows.Ocr.targets'))" />
   </Target>
   <Import Project="..\packages\Microsoft.ApplicationInsights.0.14.3-build00177\build\portable-win81+wpa81\Microsoft.ApplicationInsights.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.0.14.3-build00177\build\portable-win81+wpa81\Microsoft.ApplicationInsights.targets')" />
+  <Import Project="..\packages\Microsoft.Windows.Ocr.1.0.0\build\win81\Microsoft.Windows.Ocr.targets" Condition="Exists('..\packages\Microsoft.Windows.Ocr.1.0.0\build\win81\Microsoft.Windows.Ocr.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
