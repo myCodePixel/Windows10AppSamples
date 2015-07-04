@@ -115,6 +115,7 @@
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\WideLogo.scale-100.png" />
+    <Content Include="TestImages\Screenshot.png" />
     <Content Include="TestImages\SQuotes.jpg" />
   </ItemGroup>
   <ItemGroup>

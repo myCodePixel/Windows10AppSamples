@@ -17,6 +17,8 @@
             <StackPanel   Orientation="Horizontal" Margin="10,0,10,0" >
                 <Button x:Name="ExtractTextButton" Content="Extract Image Text" FontSize="15" MinWidth="90" Click="ExtractText_Click"  Margin="0,0,5,0"/>
                 <Button x:Name="OverlayTextButton" IsEnabled="False" Content="Overlay Image Text" FontSize="15" MinWidth="90" Click="OverlayText_Click"  Margin="0,0,5,0"/>
+                <Button x:Name="speakbutton" Content="Speak the Text" Click="speakbutton_Click" />
+                <MediaElement x:Name="Me1"/>
             </StackPanel>
             <StackPanel Grid.Row="1" Orientation="Horizontal"/>
         </StackPanel>
@@ -28,6 +30,7 @@
 
                     <Grid x:Name="Image">
                         <Image x:Name="PreviewImage" Margin="0,0,10,10"  Source="" Stretch="Uniform" Width="300" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                       
                         <Grid x:Name="TextOverlay" Visibility="Collapsed" Margin="0,0,10,10"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
                     </Grid>
 

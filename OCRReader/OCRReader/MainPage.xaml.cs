@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.SpeechSynthesis;
 using Windows.Storage;
 using Windows.Storage.FileProperties;
 using Windows.UI;
@@ -44,7 +45,7 @@ namespace OCRReader
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync("TestImages\\SQuotes.jpg");
+            var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync("TestImages\\Screenshot.png");
             await LoadImage(file);
         }
         private async Task LoadImage(StorageFile file)
@@ -170,5 +171,12 @@ namespace OCRReader
             }
         }
 
+        private async void speakbutton_Click(object sender, RoutedEventArgs e)
+        {
+            var synth = new SpeechSynthesizer();
+            SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync(ImageText.Text);
+            Me1.SetSource(stream, stream.ContentType);
+            Me1.Play();
+        }
     }
 }
