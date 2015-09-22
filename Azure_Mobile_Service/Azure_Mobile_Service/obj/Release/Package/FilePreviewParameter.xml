@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="mobile$AzureMobileService" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Aditya\ Bhardwaj\\Documents\\Visual\ Studio\ 2015\\Projects\\Azure_Mobile_Service\\Azure_Mobile_Service\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Aditya\ Bhardwaj\\Documents\\Visual\ Studio\ 2015\\Projects\\Azure_Mobile_Service\\Azure_Mobile_Service\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="MS_TableConnectionString-Web.config Connection String" description="MS_TableConnectionString Connection String used in web.config by the application to access the database." value="Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-Azure_Mobile_Service-20150912125225.mdf;Initial Catalog=aspnet-Azure_Mobile_Service-20150912125225;Integrated Security=True;MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Aditya\ Bhardwaj\\Documents\\Visual\ Studio\ 2015\\Projects\\Azure_Mobile_Service\\Azure_Mobile_Service\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MS_TableConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

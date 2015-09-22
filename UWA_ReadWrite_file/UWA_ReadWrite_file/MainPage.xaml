@@ -1,0 +1,51 @@
+﻿<Page x:Class="UWA_ReadWrite_file.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:UWA_ReadWrite_file"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="ReadTextAsync"
+                Margin="10,112,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="ReadTextAsync_Click"
+                Content="ReadTextAsync" />
+        <Button x:Name="ReadBufferAsync"
+                Margin="10,162,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="ReadBufferAsync_Click"
+                Content="ReadBufferAsync" />
+        <Button x:Name="ReadviaStream"
+                Margin="10,212,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="ReadviaStream_Click"
+                Content="ReadViaStream" />
+        <Button x:Name="WriteTextAsync"
+                Margin="10,262,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="WriteTextAsync_Click"
+                Content="WriteTextAsync" />
+        <Button x:Name="WriteBufferAsync"
+                Margin="10,312,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="WriteBufferAsync_Click"
+                Content="WriteBufferAsync" />
+        <Button x:Name="WriteviaStream"
+                Margin="10,362,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="WriteviaStream_Click"
+                Content="WriteViaStream" />
+        <TextBox Name="txtbox"
+                 Margin="224,112,168,120"
+                 TextWrapping="Wrap" />
+
+    </Grid>
+</Page>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Orders>
+  <Order>
+    <OrderId>1001</OrderId>
+    <OrderTotal>5000</OrderTotal>
+    <Customer>Muhammad</Customer>
+    <Phone>0123456789</Phone>
+  </Order>
+  <Order>
+    <OrderId>1011</OrderId>
+    <OrderTotal>5000</OrderTotal>
+    <Customer>Jone</Customer>
+    <Phone>0123466789</Phone>
+  </Order>
+  <Order>
+    <OrderId>1023</OrderId>
+    <OrderTotal>5000</OrderTotal>
+    <Customer>Fouad</Customer>
+    <Phone>01244456789</Phone>
+  </Order>
+  <Order>
+    <OrderId>1034</OrderId>
+    <OrderTotal>5000</OrderTotal>
+    <Customer>Ahmad</Customer>
+    <Phone>0123456781</Phone>
+  </Order>
+</Orders>

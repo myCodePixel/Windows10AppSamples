@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="UWA_Map_street.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWA_Map_street"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <Maps:MapControl x:Name="MapControl1" MapServiceToken="NVpMptDheTudND6i2UaO~Z3qchssf7dxs2QvvGsXCoA~AnJjJ3K2ZOn-LmCbbX1YWeYkfijTJJYW0lrzD37RQnJLSf2xN7CYNV6PrboB2Zzq"
+            HorizontalAlignment="Left" Margin="394,66,0,0" VerticalAlignment="Top" Height="633" Width="856"/>
+        <Button x:Name="Panorama" Content="Panorama" HorizontalAlignment="Left" Margin="95,158,0,0" VerticalAlignment="Top" Height="103" Width="183" Click="Panorama_Click"/>
+        <Button x:Name="threeD_View" Content="3D View" HorizontalAlignment="Left" Margin="95,328,0,0" VerticalAlignment="Top" Height="103" Width="183" Click="threeD_View_Click"/>
+    </Grid>
+</Page>

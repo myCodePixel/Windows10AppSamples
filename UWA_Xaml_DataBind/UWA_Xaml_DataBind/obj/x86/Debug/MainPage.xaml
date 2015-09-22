@@ -1,0 +1,34 @@
+﻿<Page x:Class="UWA_Xaml_DataBind.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:UWA_Xaml_DataBind"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Margin="276,119,-276,-119"
+                   FontSize="30"
+                   Text="TextBox Binding:" />
+        <TextBox x:ConnectionId='1' x:Name="textBox1"
+                 Width="440"
+                 Height="40"
+                 Margin="573,119,907,921"
+                 AcceptsReturn="True"
+                 FontSize="30"
+                 IsReadOnly="True"
+                 Text="{Binding}"
+                 TextWrapping="Wrap" />
+        <TextBlock Margin="276,250,-276,-250"
+                   FontSize="30"
+                   Text="List Box Binding" />
+        <ListBox x:ConnectionId='2' x:Name="ListBox1"
+                 Width="737"
+                 Height="50"
+                 Margin="276,313,907,717"
+                 FontSize="30"
+                 Foreground="Black"
+                 ItemsSource="{Binding}" />
+    </Grid>
+</Page>
+

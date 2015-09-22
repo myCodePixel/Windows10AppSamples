@@ -1,0 +1,1 @@
+c:\users\aditya bhardwaj\documents\visual studio 2015\Projects\UWA_XML_Binding\UWA_XML_Binding\UWA_XML_Binding.csproj;x86

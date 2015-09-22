@@ -1,0 +1,1 @@
+c:\users\aditya bhardwaj\documents\visual studio 2015\Projects\UWA_App_LifeCycle\UWA_App_LifeCycle\UWA_App_LifeCycle.csproj;x86

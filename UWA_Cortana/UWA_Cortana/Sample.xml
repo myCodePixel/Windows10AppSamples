@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+
+  <CommandSet xml:lang="en-us" Name="UniversalAppCommandSet_en-us">
+
+    <CommandPrefix> Universal Messenger Sample, </CommandPrefix>
+
+    <Example> Text IITK "Hello World" </Example>
+
+ 
+
+    <Command Name="showConversation">
+
+      <Example>  show my conversation with sam  </Example>
+
+      <ListenFor > show [my] conversation with {user} </ListenFor>
+
+      <Feedback> Showing conversation with {user} </Feedback>
+
+      <Navigate/>
+
+    </Command>
+
+ 
+
+    <PhraseList Label="user">
+
+      <Item>Sam</Item>
+
+      <Item>John</Item>
+
+    </PhraseList>
+
+  </CommandSet>
+
+</VoiceCommands>

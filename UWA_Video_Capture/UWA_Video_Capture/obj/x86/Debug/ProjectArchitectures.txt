@@ -1,0 +1,1 @@
+c:\users\aditya bhardwaj\documents\visual studio 2015\Projects\UWA_Video_Capture\UWA_Video_Capture\UWA_Video_Capture.csproj;x86

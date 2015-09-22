@@ -1,0 +1,1 @@
+c:\users\aditya bhardwaj\documents\visual studio 2015\Projects\UWA_LoadEdit_XML\UWA_LoadEdit_XML\UWA_LoadEdit_XML.csproj;x86

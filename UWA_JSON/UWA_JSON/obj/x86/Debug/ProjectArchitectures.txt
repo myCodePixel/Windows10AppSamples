@@ -1,0 +1,1 @@
+C:\Users\Aditya Bhardwaj\Documents\Visual Studio 2015\Projects\UWA_JSON\UWA_JSON\UWA_JSON.csproj;x86

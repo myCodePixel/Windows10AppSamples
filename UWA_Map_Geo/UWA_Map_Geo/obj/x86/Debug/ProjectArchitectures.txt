@@ -1,0 +1,1 @@
+c:\users\aditya bhardwaj\documents\visual studio 2015\Projects\UWA_Map_Geo\UWA_Map_Geo\UWA_Map_Geo.csproj;x86

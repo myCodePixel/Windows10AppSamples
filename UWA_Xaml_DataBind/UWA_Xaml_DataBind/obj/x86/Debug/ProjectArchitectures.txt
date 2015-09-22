@@ -1,0 +1,1 @@
+c:\users\aditya bhardwaj\documents\visual studio 2015\Projects\UWA_Xaml_DataBind\UWA_Xaml_DataBind\UWA_Xaml_DataBind.csproj;x86
