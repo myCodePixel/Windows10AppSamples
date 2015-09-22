@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="VSM.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VSM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="layoutroot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="wideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                        
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="layoutroot.Background" Value="Green"/>
+                        <Setter Target="nameTxt.(RelativePanel.RightOf)" Value="nameLbl"/>
+                    </VisualState.Setters>
+                </VisualState>
+                
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="layoutroot.Background" Value="Red"/>
+                        <Setter Target="nameTxt.(RelativePanel.Below)" Value="nameLbl"/>
+                    </VisualState.Setters>
+                </VisualState>
+                
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <RelativePanel HorizontalAlignment="Stretch" Margin="20,50">
+            
+            <TextBlock Text="Name" x:Name="nameLbl" Margin="0,5,10,5"/>
+            <TextBox x:Name="nameTxt" Width="300"/>
+            
+        </RelativePanel>
+        <Button Content="Windows phone App" Click="Button_Click"/>
+        
+    </Grid>
+</Page>
+ 

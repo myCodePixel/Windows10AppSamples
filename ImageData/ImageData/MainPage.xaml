@@ -1,0 +1,92 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ImageData"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    x:Class="ImageData.MainPage"
+    xmlns:mapdata="Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style x:Key="ListViewItemStyle1" TargetType="ListViewItem">
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="TabNavigation" Value="Local"/>
+            <Setter Property="IsHoldingEnabled" Value="True"/>
+            <Setter Property="Margin" Value="0,0,18,2"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Top"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListViewItem">
+                        <ListViewItemPresenter   ContentMargin="4" ContentTransitions="{TemplateBinding ContentTransitions}" DragForeground="{ThemeResource ListViewItemDragForegroundThemeBrush}" DragOpacity="{ThemeResource ListViewItemDragThemeOpacity}" DragBackground="{ThemeResource ListViewItemDragBackgroundThemeBrush}" DisabledOpacity="{ThemeResource ListViewItemDisabledThemeOpacity}" FocusBorderBrush="{ThemeResource ListViewItemFocusBorderThemeBrush}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" PointerOverBackgroundMargin="1" PlaceholderBackground="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" PointerOverBackground="{ThemeResource ListViewItemPointerOverBackgroundThemeBrush}" ReorderHintOffset="{ThemeResource ListViewItemReorderHintThemeOffset}" SelectedPointerOverBorderBrush="{ThemeResource ListViewItemSelectedPointerOverBorderThemeBrush}" SelectionCheckMarkVisualEnabled="False" SelectedForeground="{ThemeResource ListViewItemSelectedForegroundThemeBrush}" SelectedPointerOverBackground="{ThemeResource ListViewItemSelectedPointerOverBackgroundThemeBrush}" SelectedBorderThickness="{ThemeResource ListViewItemCompactSelectedBorderThemeThickness}" SelectedBackground="{ThemeResource ListViewItemSelectedBackgroundThemeBrush}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="#FFAC3DCD">
+
+        <FlipView x:Name="fv" SelectionChanged="fv_SelectionChanged" Margin="36,63,347,109" Background="#FFAC3DCD" Foreground="#FFCFB61B">
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <Image x:Name="imgView" Source="{Binding}" />
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+        <TextBlock x:Name="DateTaken" Margin="0,150,168,562" TextWrapping="WrapWholeWords" Width="158" FontSize="18" FontFamily="Book Antiqua" HorizontalAlignment="Right" TextReadingOrder="DetectFromContent" TextTrimming="WordEllipsis"/>
+        <!--<ListView x:Name="lv" HorizontalAlignment="Left" Height="773" Margin="10,-15,0,0" VerticalAlignment="Top" Width="369" SelectionChanged="lv_SelectionChanged">
+            -->
+        <!--<ListView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding}"></Image>
+                </DataTemplate>
+            </ListView.ItemTemplate>-->
+        <!--
+        </ListView>-->
+
+        <ListView x:Name="lv" HorizontalAlignment="Left" Height="1368.275" Margin="638.585,32.645,0,-632.92" VerticalAlignment="Top" Width="94.596" SelectionChanged="lv_SelectionChanged" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" BorderBrush="{x:Null}" Foreground="{x:Null}" ItemContainerStyle="{StaticResource ListViewItemStyle1}" >
+            <ListView.RenderTransform>
+                <CompositeTransform Rotation="89.774"/>
+            </ListView.RenderTransform>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <Image  Stretch="Fill" RenderTransformOrigin="0.5,0.5" Source="{Binding}" Height="80" Width=" 80">
+                        <Image.RenderTransform>
+                            <CompositeTransform Rotation="-90.211"/>
+                        </Image.RenderTransform>
+                    </Image>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <AppBarButton x:Name="select" HorizontalAlignment="Left" Icon="Folder" Label="Select Folder" Margin="454,-14,0,0" VerticalAlignment="Top" Height="90" Width="173" Click="Button_Click"/>
+        <TextBlock x:Name="vDate" Margin="0,150,0,562" TextWrapping="WrapWholeWords" Width="158" FontSize="18" FontFamily="Book Antiqua" HorizontalAlignment="Right" TextReadingOrder="DetectFromContent" TextTrimming="WordEllipsis"/>
+        <TextBlock x:Name="Rating" Margin="0,211,168,501" TextWrapping="WrapWholeWords" Width="158" FontSize="18" FontFamily="Book Antiqua" HorizontalAlignment="Right" TextReadingOrder="DetectFromContent" TextTrimming="WordEllipsis" RenderTransformOrigin="0.485,1.323"/>
+        <TextBlock x:Name="vRating" Margin="0,211,0,501" TextWrapping="WrapWholeWords" Width="158" FontSize="18" FontFamily="Book Antiqua" HorizontalAlignment="Right" TextReadingOrder="DetectFromContent" TextTrimming="WordEllipsis"/>
+        <TextBlock x:Name="CameraModel" Margin="0,345,173,367" TextWrapping="WrapWholeWords" Width="158" FontSize="18" FontFamily="Book Antiqua" HorizontalAlignment="Right" TextReadingOrder="DetectFromContent" TextTrimming="WordEllipsis"/>
+        <TextBlock x:Name="vCameraModel" Margin="0,345,5,367" TextWrapping="WrapWholeWords" Width="158" FontSize="18" FontFamily="Book Antiqua" HorizontalAlignment="Right" TextReadingOrder="DetectFromContent" TextTrimming="WordEllipsis"/>
+        <TextBlock x:Name="Place" Margin="0,401,173,311" TextWrapping="WrapWholeWords" Width="158" FontSize="18" FontFamily="Book Antiqua" HorizontalAlignment="Right" TextReadingOrder="DetectFromContent" TextTrimming="WordEllipsis" RenderTransformOrigin="0.519,1.363"/>
+        <TextBlock x:Name="vPlace" Margin="0,401,0,311" TextWrapping="WrapWholeWords" Width="158" FontSize="18" FontFamily="Book Antiqua" HorizontalAlignment="Right" TextReadingOrder="DetectFromContent" TextTrimming="WordEllipsis"/>
+        <TextBlock x:Name="Properties" Margin="0,65,0,647" TextWrapping="WrapWholeWords" Width="326" FontSize="18" FontFamily="Book Antiqua" HorizontalAlignment="Right" TextReadingOrder="DetectFromContent" TextTrimming="WordEllipsis"/>
+        <TextBlock x:Name="CameraManufacturer" Margin="0,284,173,428" TextWrapping="WrapWholeWords" Width="158" FontSize="18" FontFamily="Book Antiqua" HorizontalAlignment="Right" TextReadingOrder="DetectFromContent" TextTrimming="WordEllipsis"/>
+        <TextBlock x:Name="vCameraManufacturer" Margin="0,284,0,428" TextWrapping="WrapWholeWords" Width="158" FontSize="18" FontFamily="Book Antiqua" HorizontalAlignment="Right" TextReadingOrder="DetectFromContent" TextTrimming="WordEllipsis"/>
+
+
+
+        <Maps:MapControl MapServiceToken="mLCwcg3uu3Cm-RtElmjhng" x:Name="myMap" ZoomLevel="12"  HorizontalAlignment="Left" Margin="954,353,0,0" VerticalAlignment="Top" Height="216" Width="312">
+            
+        </Maps:MapControl>
+
+
+
+    </Grid>
+
+</Page>

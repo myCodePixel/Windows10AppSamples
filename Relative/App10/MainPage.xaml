@@ -1,0 +1,29 @@
+﻿  <Page
+    x:Class="App10.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App10"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <RelativePanel>
+            <Ellipse x:Name="yellowEllipse" Fill="Yellow" 
+             Width="350" Height="350"
+             RelativePanel.AlignRightWithPanel="True"
+             RelativePanel.AlignBottomWithPanel="True"/>
+            <Rectangle x:Name="purpleRectangle" Fill="Purple" 
+               Width="250" Height="200"
+               RelativePanel.Above="yellowEllipse"
+               RelativePanel.AlignLeftWith="yellowEllipse"/>
+            <Rectangle Fill="Orange" 
+               Width="225" Height="300"
+               RelativePanel.AlignVerticalCenterWithPanel="True"
+               RelativePanel.LeftOf="purpleRectangle"/>
+        </RelativePanel>
+
+
+    </Grid>
+</Page>

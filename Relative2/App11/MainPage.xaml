@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="App11.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App11"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup>
+                    <VisualState x:Name="NarrowState">
+                        <VisualState.StateTriggers>
+                            <AdaptiveTrigger MinWindowWidth="200"/>
+                        </VisualState.StateTriggers>
+                        <VisualState.Setters>
+                            <Setter Target="TitleText.FontSize" 
+                                Value="24"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="WideState">
+                        <VisualState.StateTriggers>
+                            <AdaptiveTrigger MinWindowWidth="600"/>
+                        </VisualState.StateTriggers>
+                        <VisualState.Setters>
+                            <Setter Target="ListPanel.Orientation"
+                                Value="Horizontal"/>
+                            <Setter Target="Image01.MaxHeight"
+                                Value="600"/>
+                            <Setter Target="Image02.MaxHeight"
+                                Value="600"/>
+                            <Setter Target="Image03.MaxHeight"
+                                Value="600"/>
+                            <Setter Target="Image01.MaxWidth"
+                                Value="300"/>
+                            <Setter Target="Image02.MaxWidth"
+                                Value="300"/>
+                            <Setter Target="Image03.MaxWidth"
+                                Value="300"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Border Margin="24,24,0,12" BorderBrush="Red" BorderThickness="2" Background="LightCyan">
+                <TextBlock x:Name="TitleText" FontSize="48" Text="This is a long text title!" Foreground="Black"/>
+            </Border>
+            <StackPanel x:Name="ListPanel" Orientation="Vertical">
+                <Image x:Name="Image01" Source="/Assets/Bilbao001.jpg" MaxHeight="120" Stretch="UniformToFill"/>
+                <Image x:Name="Image02" Source="/Assets/Bilbao002.jpg" MaxHeight="120" Stretch="UniformToFill"/>
+                <Image x:Name="Image03" Source="/Assets/Bilbao003.jpg" MaxHeight="120" Stretch="UniformToFill"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>
